@@ -4,4 +4,4 @@ from django.conf import settings
 
 def index(request):
     print request
-    return HttpResponse("<h1>Hi</h1>");
+    return HttpResponse("Topic Importer app");
