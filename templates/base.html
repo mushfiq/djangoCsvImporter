@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<h1>Test me!</h1>
+<body>
+<form method="post" enctype="multipart/form-data" action="/file_upload">{% csrf_token %}
+    <input type="file" name="myfile" />
+    <input type="submit" name="submit" value="Upload" />
+</form></body>
+</html>

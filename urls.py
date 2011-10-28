@@ -8,7 +8,9 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'csv_importer.views.home', name='home'),
     # url(r'^csv_importer/', include('csv_importer.foo.urls')),
-    url(r'^', 'csv_importer.topic_importer.views.index'),
+    url(r'^index', 'csv_importer.topic_importer.views.index'),
+    url(r'^test', 'csv_importer.topic_importer.views.test'),
+    url(r'^file_upload', 'csv_importer.topic_importer.views.file_upload'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
