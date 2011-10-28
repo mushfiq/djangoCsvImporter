@@ -34,7 +34,8 @@ def file_upload(request):
         except Exception, e:
             print e
 
-           
+
+    return render_to_response('base.html',context_instance=RequestContext(request))
         #print request
 
     #return HttpResponse("Inside file upload view!")
