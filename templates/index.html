@@ -3,6 +3,16 @@
 
 {% block content %}
     <br />
+    {% if msg %}
+        <div id="success">
+       <h3> {{ msg }} </h3>
+        <p>Do you want to insert it into Db?</p>
+        If yes click here <a href="/test">Click</a>
+
+        </div>
+        <br />
+    {% endif %}
+
 <form method="post" enctype="multipart/form-data" action="/file_upload">{% csrf_token %}
     <input type="file" name="myfile" />
     <input type="submit" name="submit" value="Upload" />
