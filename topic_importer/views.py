@@ -24,6 +24,7 @@ def test(request):
     return HttpResponse("sucess!")
 
 def file_upload(request):
+    print settings.STATIC_ROOT
 
     if request.method == 'POST':
         try:
@@ -35,7 +36,13 @@ def file_upload(request):
             print e
 
 
-    return render_to_response('base.html',context_instance=RequestContext(request))
+    return render_to_response(
+        'index.html',
+            {'settings.STATIC_ROOT':settings.STATIC_ROOT}, context_instance=RequestContext(request))
+        
+
+
+   
         #print request
 
     #return HttpResponse("Inside file upload view!")

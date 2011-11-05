@@ -1,8 +1,118 @@
-<!DOCTYPE html>
-<h1>Test me!</h1>
-<body>
-<form method="post" enctype="multipart/form-data" action="/file_upload">{% csrf_token %}
-    <input type="file" name="myfile" />
-    <input type="submit" name="submit" value="Upload" />
-</form></body>
-</html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         {% block title %}
+
+             {% endblock %}
+
+{% block meta %}
+
+		{% endblock %}
+{% block css %}
+		    <link rel="stylesheet" href="/static/app.css"/>
+        {% endblock %}
+    </head><body>
+{% block header %}
+        <div id="wrapper">
+            <div id="header">
+                <div id="header-wrapper">
+                    <div id="header-top">
+                        <div class="wrapper">
+                            <div id="header-left">
+                                <div id="header-logo">
+                                    &nbsp; &nbsp; &nbsp; NewsCred <span class="slogan">Control Panel</span>
+                                </div>
+                            </div>
+                            <div id="header-right">
+                                <ul id="header-small-nav">
+                                    <li><a href="http://controlpanel.newscred.com/user/user/4dbe66ff523d5beb01000000/edit">LOGGED IN AS: <span class="orange">mushfiq@newscred.com</span></a></li>
+
+
+                                        <li><span class="divider">|</span></li>
+                                        <li><a href="http://controlpanel.newscred.com/user/user/overview">MANAGE USERS</a></li>
+                                        <li><span class="divider">|</span></li>
+                                        <li><a href="http://controlpanel.newscred.com/cms/manage/index">MANAGE CMS</a></li>
+                                                                        <li><span class="divider">|</span></li>
+                                    <li><a href="http://controlpanel.newscred.com/user/user/logout">LOG OUT</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div id="header-bar">
+                        <ul id="nav">
+                            <li><a class="first" href="http://controlpanel.newscred.com/dashboard">DASHBOARD</a></li>
+                            <li><a href="http://controlpanel.newscred.com/support">SUPPORT</a></li>
+                            <li><a href="http://newscred.com/developer">DEVELOPERS</a></li>
+                            <li><a href="http://controlpanel.newscred.com/user/user/4dbe66ff523d5beb01000000/edit">ACCOUNT SETTINGS</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="body">
+                <div class="box">
+
+                    <!--[if lte IE 8 ]>
+                      <div class="round"><div class="round-top"><div class="round-right"><div class="round-left"><div class="round-top-left"><div class="round-top-right"><div class="round-bottom-left"><div class="round-bottom-right"><div class="padding"><div class="inner">
+                    <![endif]-->
+
+                    <div id="breadcrumb">
+                        DASHBOARD
+                    </div>
+                    <div id="sidebar">
+                        <ul id="sidebar-nav">
+                            <li><a href="#">Quick Links</a></li>
+<li><a class="child-link" href="http://newscred.com/developer/docs">API Documentation</a></li>
+<li><a class="child-link" href="http://newscred.com/developer/accesskey">Request Access Key</a></li>
+<li><a class="child-link" href="http://controlpanel.newscred.com/support">Support</a></li>
+<li><a href="#">Audit Images</a></li>
+<li><a class="child-link" href="http://controlpanel.newscred.com/imageauditor/image">Latest Unchecked</a></li>
+<li><a class="child-link" href="http://controlpanel.newscred.com/imageauditor/searchtopicgroup">Search Topic Group</a></li>
+                        </ul>
+                    </div>
+                    <div id="content">
+                        <div class="padding">
+                            <h1 class="left">Upload CSV file</h1>
+<div class="clear"></div>
+
+<div id="dashboard-content-overview" class="control-panel" style="width: 100%;">
+	<h2><span>CMS Services</span></h2>
+
+
+	<div class="content" style="height: auto;">
+		<table class="control-panel" width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr>
+                {% block content %}
+
+                    {% endblock %}
+            </tr>
+                    </tbody></table>
+    </div><!--[if lte IE 8 ]> <div class="content_footer"> <div> </div> </div> <![endif]-->
+
+</div>
+<div id="dashboard-content-overview" class="control-panel" style="width: 100%;">
+
+
+</div>
+                                                        <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+
+                    <!--[if lte IE 8 ]>
+                    </div></div></div></div></div></div></div></div></div></div>
+                    <![endif]-->
+
+
+                </div>
+            </div>
+            {% endblock %}
+{% block footer %}
+            <div id="footer">
+
+            </div>
+{% endblock %}
+        </div>
+
+    </body></html>
